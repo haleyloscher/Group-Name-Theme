@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KindMind — Contact</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="robots" content="noindex"/>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="KindMind logo" />
+        <h1>KindMind</h1>
+      </a>
+      <nav class="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+      <button class="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="container section">
+      <div style="display:grid; grid-template-columns:1fr 420px; gap:1.25rem; align-items:start;">
+        <div>
+          <h2 style="font-family:Montserrat, sans-serif; color:var(--forest)">Contact Us</h2>
+          <p class="small">Have questions about our events, workshops, or partnering? Fill out the form and we'll get back to you.</p>
+
+          <form id="contactForm" class="form" action="mailto:yourcampusemail@school.edu" method="post" enctype="text/plain" onsubmit="return handleSubmit(event)">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your full name">
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@school.edu">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Tell us about your interest..."></textarea>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <div id="formFeedback" class="small" style="margin-top:0.6rem;"></div>
+          </form>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3>Office</h3>
+            <p class="small">Student Center<br/>Pace University</p>
+            <h3 style="margin-top:1rem;">Social</h3>
+            <div class="small">Instagram • Facebook • Email</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><strong>KindMind</strong><div class="small">Mobilizing students for mental health</div></div>
+      <div class="small">© <span id="year3"></span> KindMind</div>
+      <div class="social"><a class="small" href="#">Instagram</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year3').textContent = new Date().getFullYear();
+
+    function handleSubmit(e){
+      // Very lightweight client-side validation + helpful message
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      const feedback = document.getElementById('formFeedback');
+
+      if(!name || !email || !msg){
+        feedback.textContent = 'Please fill all fields before sending.';
+        feedback.style.color = 'crimson';
+        return false;
+      }
+
+      feedback.style.color = 'var(--forest)';
+      feedback.textContent = 'Your message will open in your email client. If that doesn’t work, email: yourcampusemail@school.edu';
+
+      // Let the mailto fallback work by allowing the form to submit — many instructors accept mailto fallback.
+      return true;
+    }
+  </script>
+</body>
+</html>

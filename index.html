@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KindMind — Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="KindMind — student nonprofit focused on mental health awareness and emotional wellbeing." />
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="KindMind home">
+        <img src="images/logo.png" alt="KindMind logo" />
+        <h1>KindMind</h1>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container section">
+      <div class="hero-card">
+        <span class="kicker">Mental Health • Student-led</span>
+        <h2>Supportive spaces for students to talk, learn, and grow.</h2>
+        <p class="lead">KindMind partners with Active Minds to create welcoming campus conversations about mental health. We offer workshops, peer support, and resources for emotional wellbeing.</p>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="about.html">Learn About Us</a>
+          <a class="btn btn-ghost" href="contact.html">Get Involved</a>
+        </div>
+
+        <div style="margin-top:1rem;">
+          <small class="small">Mission: Mobilize youth to lead a transformative movement in mental health.</small>
+        </div>
+      </div>
+
+      <div style="border-radius:14px; overflow:hidden;">
+        <img src="images/hero-home.jpg" alt="Students talking outside - mental health support" style="width:100%; height:100%; object-fit:cover; display:block; min-height:300px;">
+      </div>
+    </section>
+
+    <section class="container section">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;">
+        <div style="flex:1; min-width:260px;">
+          <h3 style="font-family:Montserrat, sans-serif; color:var(--forest); margin-bottom:0.35rem;">Our Programs</h3>
+          <p class="small">Peer workshops • Speaker events • Safe-space circles • Resource referrals</p>
+        </div>
+        <div style="display:flex; gap:0.5rem; align-items:center;">
+          <div class="badge">Inclusive</div>
+          <div class="badge" style="background:var(--teal); color:white;">Empowering</div>
+        </div>
+      </div>
+
+      <div style="margin-top:1rem;" class="grid-3">
+        <div class="card">
+          <h3>Peer Support Circles</h3>
+          <p>Facilitated spaces where students share stories, resources, and coping strategies.</p>
+        </div>
+        <div class="card">
+          <h3>Workshops & Training</h3>
+          <p>Skill-based workshops on emotion regulation, stress management, and help-seeking.</p>
+        </div>
+        <div class="card">
+          <h3>Campaigns & Events</h3>
+          <p>Awareness weeks and collaborative events with campus partners to reduce stigma.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>KindMind</strong>
+        <div class="small">Mobilizing students for mental health</div>
+      </div>
+
+      <div class="small">© <span id="year"></span> KindMind • Based on Active Minds materials</div>
+
+      <div class="social">
+        <a href="#" class="small">Instagram</a>
+        <a href="#" class="small">Facebook</a>
+        <a href="#" class="small">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // basic mobile menu behavior
+    const btn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !expanded);
+      nav.style.display = expanded ? 'none' : 'flex';
+    });
+  </script>
+</body>
+</html>

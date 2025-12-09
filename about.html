@@ -1,105 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - KindMind</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KindMind — About</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/KindMind.png" alt="KindMind Logo">
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="KindMind logo" />
+        <h1>KindMind</h1>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="container section hero">
+      <div class="hero-card">
+        <span class="kicker">About KindMind</span>
+        <h2>Why we exist</h2>
+        <p class="lead">KindMind is a student-led initiative inspired by Active Minds. We exist to create inclusive, trauma-aware spaces where students can discuss mental health without stigma.</p>
+        <a class="btn btn-primary" href="contact.html">Partner With Us</a>
+      </div>
+
+      <div style="border-radius:14px; overflow:hidden;">
+        <img src="images/hero-about.jpg" alt="students meeting" style="width:100%; height:100%; object-fit:cover; min-height:260px;">
+      </div>
+    </section>
+
+    <section class="container section">
+      <div style="display:flex; gap:1rem; align-items:flex-start; flex-wrap:wrap;">
+        <div style="flex:1; min-width:260px;">
+          <h3 style="font-family:Montserrat, sans-serif; color:var(--forest)">Mission & Vision</h3>
+          <p class="small"><strong>Mission:</strong> Mobilize youth and young adults to lead a transformative movement in mental health.</p>
+          <p class="small"><strong>Vision:</strong> To destigmatize mental health disorders by promoting open, enlightened discussion and creating better lives for all.</p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="hero-section">
-            <h1>About KindMind</h1>
-            <p class="tagline">Supportive " Empowering " Inclusive " Compassionate</p>
-        </section>
+        <aside style="min-width:260px;">
+          <div class="card">
+            <h3>How we work</h3>
+            <p class="small">Peer-run events, collaboration with campus services, and student advocacy.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-        <section class="mission-vision">
-            <div class="mission">
-                <h2>Our Mission</h2>
-                <p>Mobilize youth and young adults to lead a transformative movement in mental health, forever changing how it is valued and prioritized in society.</p>
-            </div>
+    <section class="container section">
+      <h3 style="font-family:Montserrat, sans-serif; color:var(--forest)">Our Values</h3>
+      <div style="margin-top:0.75rem;" class="grid-3">
+        <div class="card"><h3>Supportive</h3><p class="small">We prioritize listening and peer care.</p></div>
+        <div class="card"><h3>Empowering</h3><p class="small">We equip students with tools and skills.</p></div>
+        <div class="card"><h3>Inclusive</h3><p class="small">We welcome diverse experiences and identities.</p></div>
+      </div>
+    </section>
 
-            <div class="vision">
-                <h2>Our Vision</h2>
-                <p>To destigmatize mental health disorders by promoting open, enlightened discussion of mental health and to create a better life for all who suffer.</p>
-            </div>
-        </section>
+  </main>
 
-        <section class="our-story">
-            <h2>Our Story</h2>
-            <p>KindMind is dedicated to transforming the way society views and addresses mental health. We believe that mental health is just as important as physical health, and everyone deserves access to support, resources, and compassionate care.</p>
+  <footer>
+    <div class="container footer-grid">
+      <div><strong>KindMind</strong><div class="small">Mobilizing students for mental health</div></div>
+      <div class="small">© <span id="year2"></span> KindMind</div>
+      <div class="social">
+        <a href="#" class="small">Instagram</a>
+        <a href="#" class="small">Facebook</a>
+      </div>
+    </div>
+  </footer>
 
-            <p>Founded on the principles of empathy and understanding, KindMind works tirelessly to create safe spaces where young adults can share their experiences, find support, and advocate for mental health awareness. We recognize that mental health challenges affect millions of people, yet stigma and misunderstanding continue to prevent many from seeking the help they need.</p>
-
-            <p>Through education, advocacy, and community building, we're breaking down barriers and creating a world where mental health is openly discussed, properly understood, and adequately supported. Our programs reach students and young adults across communities, providing them with the tools and resources they need to support themselves and others.</p>
-        </section>
-
-        <section class="our-values">
-            <h2>Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <h3>Supportive</h3>
-                    <p>We provide a safe, understanding environment where everyone feels heard and valued.</p>
-                </div>
-                <div class="value-card">
-                    <h3>Empowering</h3>
-                    <p>We give individuals the tools and confidence to take control of their mental health journey.</p>
-                </div>
-                <div class="value-card">
-                    <h3>Inclusive</h3>
-                    <p>We welcome everyone, regardless of background, identity, or experience with mental health.</p>
-                </div>
-                <div class="value-card">
-                    <h3>Compassionate</h3>
-                    <p>We approach mental health with empathy, understanding, and genuine care for every individual.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="our-impact">
-            <h2>Making a Difference</h2>
-            <p>Every day, KindMind is working to create positive change in the mental health landscape. Through peer-to-peer support, educational programs, and advocacy initiatives, we're helping to:</p>
-            <ul>
-                <li>Reduce stigma surrounding mental health disorders</li>
-                <li>Increase access to mental health resources and support</li>
-                <li>Educate communities about mental health awareness</li>
-                <li>Empower young adults to become mental health advocates</li>
-                <li>Create lasting change in how society values mental wellbeing</li>
-            </ul>
-        </section>
-
-        <section class="join-us">
-            <h2>Join Our Movement</h2>
-            <p>Mental health matters, and together we can make a difference. Whether you're seeking support, want to learn more, or are ready to become an advocate, KindMind welcomes you.</p>
-            <a href="contact.html" class="cta-button">Get Involved</a>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-info">
-                <p>&copy; 2024 KindMind. All rights reserved.</p>
-                <p>Transforming mental health awareness, one conversation at a time.</p>
-            </div>
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </div>
-    </footer>
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
 </body>
 </html>
